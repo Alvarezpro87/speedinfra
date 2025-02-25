@@ -2,88 +2,96 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CloudIcon, CodeBracketIcon, Cog6ToothIcon, BoltIcon, ArrowPathIcon } from '@heroicons/react/24/solid';
+
 
 export default function Sobre() {
-  const features = [
-    {
-      title: "Provisionamento Ágil",
-      description: "Implante máquinas virtuais e configure middlewares de forma rápida e eficiente.",
-      icon: CloudIcon,
-    },
-    {
-      title: "Infra-as-Code",
-      description: "Gerencie repositórios e a infraestrutura com total integração.",
-      icon: CodeBracketIcon,
-    },
-    {
-      title: "CI/CD Automatizado",
-      description: "Configure pipelines de integração e deploy contínuo com um único clique.",
-      icon: BoltIcon,
-    },
-    {
-      title: "Automação Completa",
-      description: "Sincronize tarefas, configure hooks e garanta a consistência dos ambientes.",
-      icon: Cog6ToothIcon,
-    },
-    {
-      title: "Gestão Centralizada",
-      description: "Controle todos os ambientes de forma centralizada e dinâmica.",
-      icon: ArrowPathIcon,
-    },
-  ];
-
   return (
-    <section className="py-16">
-      {/* Cabeçalho da página */}
-      <motion.div
-        className="max-w-4xl mx-auto text-center"
-        initial={{ opacity: 0, y: 20 }}
+    <section className="py-16 space-y-16">
+      {/* Seção Hero */}
+      <motion.div 
+        className="relative h-96 flex items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-lg overflow-hidden"
+        initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-4 text-primary">Sobre a speedInfra</h2>
-        <p className="text-lg text-gray-300 mb-12">
-          A speedInfra é uma plataforma inovadora que revoluciona o provisionamento de ambientes com uma abordagem moderna e automatizada.
-          Simplifique sua jornada DevOps com uma esteira completa que integra desde a criação de repositórios até a automação de deploys.
-        </p>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 text-center px-4">
+          <h2 className="text-5xl font-extrabold text-primary mb-4">Sobre a speedInfra</h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            Revolucione a forma de provisionar ambientes com uma plataforma moderna, automatizada e intuitiva.
+          </p>
+        </div>
       </motion.div>
 
-      {/* Grid de recursos */}
-      <div className="grid gap-8 max-w-5xl mx-auto px-4 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature, index) => {
-          const Icon = feature.icon;
-          return (
-            <motion.div
-              key={index}
-              className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center justify-center mb-4">
-                <Icon className="h-12 w-12 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
-            </motion.div>
-          );
-        })}
-      </div>
-
-      {/* Seção final de missão */}
-      <motion.div
-        className="max-w-3xl mx-auto mt-16 text-center"
-        initial={{ opacity: 0, y: 20 }}
+      {/* Nossa História */}
+      <motion.div 
+        className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center px-4"
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <p className="text-gray-400">
-          Nossa missão é transformar a forma como você gerencia ambientes, eliminando a complexidade e aumentando a produtividade da sua equipe.
-          Venha descobrir o futuro da automação DevOps com a speedInfra.
+        <div>
+          <img 
+            src="devops2.png" 
+            alt="Nossa História" 
+            className="w-100 h-25 rounded-lg shadow-lg"
+          />
+        </div>
+        <div>
+          <h3 className="text-3xl font-bold text-primary mb-4">Nossa História</h3>
+          <p className="text-gray-300 mb-4">
+            Fundada por especialistas em DevOps, a speedInfra nasceu da necessidade de simplificar e agilizar o provisionamento de ambientes complexos. 
+            Combinamos tecnologia de ponta e processos ágeis para criar uma plataforma que entrega resultados rápidos e consistentes.
+          </p>
+          <p className="text-gray-300">
+            Ao longo dos anos, evoluímos constantemente, integrando as melhores práticas do mercado e garantindo a satisfação dos nossos clientes com soluções inovadoras e eficientes.
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Missão, Visão e Valores */}
+      <motion.div 
+        className="max-w-6xl mx-auto px-4"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-3xl font-bold text-center text-primary mb-8">Missão, Visão e Valores</h3>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h4 className="text-2xl font-semibold text-primary mb-2">Missão</h4>
+            <p className="text-gray-300">
+              Transformar a forma como você gerencia ambientes, simplificando processos e acelerando resultados.
+            </p>
+          </div>
+          <div className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h4 className="text-2xl font-semibold text-primary mb-2">Visão</h4>
+            <p className="text-gray-300">
+              Ser a referência em automação DevOps, integrando tecnologia e inovação para impulsionar o sucesso dos nossos clientes.
+            </p>
+          </div>
+          <div className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h4 className="text-2xl font-semibold text-primary mb-2">Valores</h4>
+            <p className="text-gray-300">
+              Inovação, agilidade, transparência e compromisso com a excelência em cada entrega.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Chamada Final */}
+      <motion.div 
+        className="max-w-4xl mx-auto text-center px-4"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <p className="text-gray-400 text-xl">
+          Descubra como a speedInfra pode transformar a maneira como você gerencia seus ambientes, impulsionando a produtividade da sua equipe para novos patamares.
         </p>
       </motion.div>
     </section>
