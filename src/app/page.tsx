@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       {/* Seção Principal */}
-      <section className="text-center py-24 mt-12 bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-lg shadow-lg">
+      <section className=" max-w-5xl mx-auto px-4 text-center py-24 mt-12 bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-lg shadow-lg">
         <motion.h2 
           className="text-5xl font-extrabold mb-6"
           initial={{ opacity: 0, y: -20 }}

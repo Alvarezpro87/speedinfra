@@ -3,20 +3,19 @@
 
 import { motion } from 'framer-motion';
 
-
 export default function Sobre() {
   return (
     <section className="py-16 space-y-16">
       {/* Seção Hero */}
       <motion.div 
-        className="relative h-96 flex items-center justify-center bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-lg overflow-hidden"
+        className="relative h-96 flex items-center justify-center  overflow-hidden max-w-6xl mx-auto px-4"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-lg shadow-lg"></div>
+        <div className="relative z-10 text-center">
           <h2 className="text-5xl font-extrabold text-primary mb-4">Sobre a speedInfra</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Revolucione a forma de provisionar ambientes com uma plataforma moderna, automatizada e intuitiva.
@@ -26,7 +25,7 @@ export default function Sobre() {
 
       {/* Nossa História */}
       <motion.div 
-        className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center px-4"
+        className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-4"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -36,7 +35,7 @@ export default function Sobre() {
           <img 
             src="devops2.png" 
             alt="Nossa História" 
-            className="w-100 h-25 rounded-lg shadow-lg"
+            className="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
         <div>
@@ -84,7 +83,7 @@ export default function Sobre() {
 
       {/* Chamada Final */}
       <motion.div 
-        className="max-w-4xl mx-auto text-center px-4"
+        className="max-w-6xl mx-auto text-center px-4"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
