@@ -105,7 +105,7 @@ export default function Contato() {
           className="w-full flex items-center justify-center space-x-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-4 rounded-lg transition duration-200"
         >
           <span>{loading ? "Enviando..." : "Enviar"}</span>
-          <PaperAirplaneIcon className="h-5 w-5 transform rotate-45" />
+          <PaperAirplaneIcon className="h-5  " />
         </motion.button>
       </motion.form>
     </section>
